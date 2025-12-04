@@ -5,7 +5,6 @@
 # Common files to ignore when working with MATSim
 output/
 scenarios/output
-test/
 
 *.gz
 *.pbf
