@@ -34,8 +34,11 @@ public class Run1pctKelheimScenario {
 
 	public static void main(String[] args) {
 		// ======= Load & adapt config =======
-		String configPath = "input/v3.1/kelheim-v3.1-config.xml";
-		Config config = ConfigUtils.loadConfig(configPath);
+		if ( args==null || args.length==0 ){
+			args = new String[] {"input/v3.1/kelheim-v3.1-config.xml"};
+		}
+
+		Config config = ConfigUtils.loadConfig(args);
 
 		SnzActivities.addScoringParams(config);
 
